@@ -1295,7 +1295,7 @@
       {
         "name": "FOFG: Titanite Shard - portcullis near ruined house below Cale, corpse",
         "sections":[{
-          "access_rules": ["Soldier Key"]
+          "access_rules": []
         }],
         "map_locations": [
           {
