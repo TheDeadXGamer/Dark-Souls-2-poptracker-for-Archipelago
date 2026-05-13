@@ -109,7 +109,7 @@
       {
         "name": "Orro: Fire Seed - behind contraption, illusory wall",
         "sections":[{
-          "access_rules": []
+          "access_rules": ["Master Lockstone"]
         }],
         "map_locations": [
           {
