@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Game Version",
+    "type": "toggle",
+	  "img": "images/options/SotFS.png",
+    "disabled_img":"images/options/DS2.jpg",
+    "codes": "SotFS"
+  },
+  {
+    "name": "DLC",
+    "type": "static",
+	  "img": "images/options/DLC.png",
+    "codes": "dlc"
+  },
+  {
+    "name": "Crown of the Old Iron King",
+    "type": "toggle",
+	  "img": "images/options/CotOIK.png",
+    "codes": "old_iron_king_dlc"
+  },
+  {
+    "name": "Crown of the Ivory King",
+    "type": "toggle",
+	  "img": "images/options/CotIK.png",
+    "codes": "ivory_king_dlc"
+  },
+  {
+    "name": "Crown of the Sunken King",
+    "type": "toggle",
+	  "img": "images/options/CotSK.png",
+    "codes": "sunken_king_dlc"
+  },
+  {
+    "name": "Combat Logic Header",
+    "type": "static",
+	  "img": "images/options/CombatLogicHeader.png",
+    "codes": "combat_logic_header"
+  },
+  {
+    "name": "Combat Logic",
+    "type": "progressive",
+    "codes": "combat_logic",
+    "allow_disabled": false,
+    "stages": [
+      {"img": "images/options/Easy.png"},
+      {"img": "images/options/Normal.png"},
+      {"img": "images/options/Hard.png"},
+      {"img": "images/options/None.png"}
+    ]
+  }
+]

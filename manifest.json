@@ -1,14 +1,14 @@
 {
-  "name": "Dark Souls 2 Randomizer Track Pack",
+  "name": "Dark Souls 2 AP Map Tracker",
   "game_name": "Dark Souls 2",
-  "package_version": "1.4",
-  "package_uid": "DS2_Track_Pack",
-  "author": "CRIT MAGNET",
+  "package_version": "2.0.0",
+  "package_uid": "ds2_ooga_2.0.0",
+  "author": "TheTechnocrat",
   "min_poptracker_version": "0.25.9",
   "target_poptracker_version": "0.32.0",
   "variants": {
     "standard": {
-      "display_name": "Map Tracker",
+      "display_name": "AP Map Tracker",
       "flags": [
         "ap"
       ]

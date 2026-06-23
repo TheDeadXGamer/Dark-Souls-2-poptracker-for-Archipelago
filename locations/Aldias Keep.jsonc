@@ -9,7 +9,7 @@
         "name": "Aldias: Fragrant Branch of Yore - locked side room, enemy drop",
         "sections":[{
           "access_rules": ["Aldia Key"],
-          "visibility_rules": ["SotFS, $hasnot|SotFS"] //Not implemented, it will stay invisible
+          "visibility_rules": ["SotFS, $hasnot|SotFS"]
         }],
         "map_locations": [
           {
@@ -459,8 +459,4 @@
 	  
     ]
   }
-  
-  
-  
- 
 ]

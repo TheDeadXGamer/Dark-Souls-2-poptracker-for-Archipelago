@@ -1,38 +1,40 @@
--- entry point for all lua code of the pack
--- more info on the lua API: https://github.com/black-sliver/PopTracker/blob/master/doc/PACKS.md#lua-interface
-ENABLE_DEBUG_LOG = true
--- get current variant
-local variant = Tracker.ActiveVariantUID
--- check variant info
-IS_ITEMS_ONLY = variant:find("itemsonly")
+--- Different log levels of the pack
+--- @enum log_level
+LOG_LEVELS = {
+    DEBUG = 1,
+    INFO = 2,
+    WARNING = 3,
+    ERROR = 4,
+}
 
-print("Loaded variant: ", variant)
-if ENABLE_DEBUG_LOG then
-    print("Debug logging is enabled!")
-end
+--- Enables Poptracker's own error logging
+DEBUG = { "errors" }
 
--- Items
+--- The log level of the pack
+--- @type log_level
+LOG_LEVEL = LOG_LEVELS.INFO
+
+--- Whether the loaded variant is items only
+--- @type boolean
+IS_ITEMS_ONLY = Tracker.ActiveVariantUID:find("itemsonly") ~= nil
+
+print("---- Dark Souls II AP Tracker ----")
+
+require("utils")
+require("scripts.archipelago")
+
 Tracker:AddItems("items/items.json")
-Tracker:AddItems("items/options.json")
-
--- Logic
-ScriptHost:LoadScript("scripts/logic.lua")
-
-
-
-if not IS_ITEMS_ONLY then -- <--- use variant info to optimize loading
-    -- Maps
-    Tracker:AddMaps("maps/maps.jsonc")
-    -- Locations
-    ScriptHost:LoadScript("scripts/locations.lua")
-end
-
--- Layout
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
-Tracker:AddLayouts("layouts/options.json")
 
+if not IS_ITEMS_ONLY then
+    Tracker:AddItems("items/options.json")
+    Tracker:AddLayouts("layouts/options.json")
+    Tracker:AddMaps("maps/maps.json")
+    ScriptHost:LoadScript("scripts/locations.lua")
 
--- AutoTracking for Poptracker
-ScriptHost:LoadScript("scripts/autotracking.lua")
+    -- We need to reset the hidden items when starting PopTracker, otherwise
+    -- in some cases it would be impossible to change a location's state.
+    SetAllHiddenItems(true)
+end
