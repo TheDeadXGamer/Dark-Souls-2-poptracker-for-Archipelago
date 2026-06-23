@@ -1,5 +1,0 @@
-TAB_MAPPING = {  
-
-
-
-} 
