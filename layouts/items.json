@@ -1,58 +1,57 @@
 {
-    "Items": {
+    "key_items_grid": {
         "type": "array",
-        "orientation": "vertical",
-        "margin": "0,0",
-        "content": [
+        "orientation": "horizontal",
+        "margin": "0",
+        "content": [ 
             {
-                "type": "array",
-                "orientation": "horizontal",
-                "margin": "0,0",
-                "content": [
-                    {
-                        "type": "itemgrid",
-                        "item_margin": "2, 0",
-                        "h_alignment": "left",
-						"item_size": 50,
-                        "rows": [
-                            ["Estus Flask Shards", "Sublime Bone Dusts", "King's Ring", "Ring of Whispers", "Petrified Egg"],
-                            ["Master Lockstone", "Rotunda Lockstone", "Giant's Kinship", "Token of Fidelity", "Token of Spite"],
-                            ["Ashen Mist Heart", "All 5 Souls of a Giant", "Eye of the Priestess", "Dull Ember", "Dragon Talon"],
-                            ["Frozen Flower", "Dragon Stone", "Scorching Iron Scepter", "All Smelter Wedges", "Soldier Key"],
-                            ["Key to King's Passage", "Bastille Key", "Iron Key", "Forgotten Key", "Key to the Embedded"],
-                            ["Brightstone Key", "Antiquated Key", "Fang Key", "House Key", "Lenigrast's Key"],
-                            ["Tseldora Den Key", "Undead Lockaway Key", "Aldia Key", "Heavy Iron Key", "Eternal Sanctum Key"],
-                            ["Tower Key", "Garrison Ward Key", "Flying Feline Boots", "Silvercat Ring", "Ladder Miniature"]
-                        ]
-                    }
+                "type": "itemgrid",
+                "item_margin": "0,0",
+                "item_size": 40,
+                "rows": [
+                    ["key_embedded", "key_soldier", "key_kingspassage", "key_bastille", "key_iron","key_forgotten", "key_brightstone"],
+                    ["key_antiquated", "key_fang", "key_house", "key_lenigrast", "key_rotundalockstone", "key_giantskinship", "key_ashenmistheart"],
+                    ["key_tseldoraden", "key_ladderminiature", "key_undeadlockaway", "key_dullember", "key_aldia", "key_dragontalon", "key_heavyiron"],
+                    ["key_frozenflower", "key_eternalsanctum", "key_tower", "key_garrisonward", "key_dragonstone", "key_scorchingironscepter", "key_eyeofthepriestess"]
                 ]
             }
         ]
     },
-	"Unpetrifications": {
+    "misc_items_grid": {
         "type": "array",
-        "orientation": "vertical",
-        "margin": "0,0",
-        "content": [
+        "orientation": "horizontal",
+        "margin": "0",
+        "content": [ 
             {
-                "type": "array",
-                "orientation": "horizontal",
-                "margin": "0,0",
-                "content": [
-                    {
-                        "type": "itemgrid",
-                        "item_margin": "2, 0",
-                        "h_alignment": "left",
-						"item_size": 50,
-                        "rows": [
-                            ["Statue in TB", "Rosabeth of Melfia","Statue in Heide", "Statue in LB", "Straid of Olaphis"],
-							["Statue in Black Gulch", "Statue near Manscorpion Tark", "Statue near Black Knight Halberd", "Statue Blocking the Chest in Shaded Ruins", "Lion Mage Set Statue in Shaded Ruins"],
-							["Fang Key Statue in Shaded Ruins"]
-                        ]
-                    }
+                "type": "itemgrid",
+                "item_margin": "0,0",
+                "item_size": 40,
+                "rows": [
+                    ["cons_estusflaskshards", "cons_sublimebonedusts", "expl_flyingfelineboots"],
+                    ["expl_silvercatring", "expl_masterlockstone", "opt_ringofwhispers"],
+                    ["opt_tokenoffidelity", "opt_tokenofspite", "opt_petrifiedegg"],
+                    ["res_soulofagiant", "res_smelterwedge"]
                 ]
             }
         ]
-    }
-    
+    },
+	"unpetrify_grid": {
+        "type": "array",
+        "orientation": "horizontal",
+        "margin": "0",
+        "content": [
+            {
+                "type": "itemgrid",
+                "margin": "0,0",
+                "item_margin": "0,0",
+                "item_size": 40,
+                "rows": [
+                    ["stat_thingsbetwixt", "stat_rosabethofmelfia", "stat_heidestowerofflame", "stat_lostbastille", "stat_straidofolaphis"],
+                    ["stat_blackgulch", "stat_manscorpiontark", "stat_blackknigthalberd", "stat_shadedruinschest", "stat_shadedruinslionmageset"],
+                    ["stat_shadedruinsfangkey", "stat_shadedruinswarlockmask", "stat_milfanitoentrance", "stat_cyclopsaldiaskeep", "stat_leftcagealdiaskeep"],
+                    ["stat_rightcagealdiaskeep", "stat_dragonaerie"]
+                ]
+            }
+        ]
+    }   
 }

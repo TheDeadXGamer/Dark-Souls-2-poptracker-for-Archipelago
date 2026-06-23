@@ -14,20 +14,18 @@
               "item_h_alignment": "left",
               "item_size": "400, 60",
               "rows": [
-				["SotFS"],
-        ["DLC"],
-				["DLC 1"],
-        ["DLC 2"],
-        ["DLC 3"],
-        ["Combat Logic Header"],
-        ["Combat Logic"]
-
-
+                ["SotFS"],
+                ["DLC"],
+                ["DLC 1"],
+                ["DLC 2"],
+                ["DLC 3"],
+                ["Combat Logic Header"],
+                ["Combat Logic"]
               ]
             }
           ]
         }
-		]
+		  ]
 		}
 	}
 }
