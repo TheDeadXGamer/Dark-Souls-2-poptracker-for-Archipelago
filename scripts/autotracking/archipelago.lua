@@ -1,4 +1,3 @@
-
 require("scripts/autotracking/item_mapping")
 require("scripts/autotracking/location_mapping")
 
@@ -7,35 +6,7 @@ CUR_INDEX = -1
 
 SLOT_DATA = {}
 
-
-function onClearHandler(slot_data)
-    local clear_timer = os.clock()
-    
-    -- ScriptHost:RemoveWatchForCode("StateChange")
-    -- Disable tracker updates.
-    Tracker.BulkUpdate = true
-    -- Use a protected call so that tracker updates always get enabled again, even if an error occurred.
-    local ok, err = pcall(onClear, slot_data)
-    -- Enable tracker updates again.
-    if ok then
-        -- Defer re-enabling tracker updates until the next frame, which doesn't happen until all received items/cleared
-        -- locations from AP have been processed.
-        local handlerName = "AP onClearHandler"
-        local function frameCallback()
-            -- ScriptHost:AddWatchForCode("StateChange", "*", StateChange)
-            ScriptHost:RemoveOnFrameHandler(handlerName)
-            Tracker.BulkUpdate = false
-            print(string.format("Time taken total: %.2f", os.clock() - clear_timer))
-        end
-        ScriptHost:AddOnFrameHandler(handlerName, frameCallback)
-    else
-        Tracker.BulkUpdate = false
-        print("Error: onClear failed:")
-        print(err)
-    end
-end
-
-function onClear(slot_data)
+local function onClear(slot_data)
     CUR_INDEX = -1
 
     -- Reset locations
@@ -87,40 +58,68 @@ function onClear(slot_data)
 
 
     if slot_data['game_version'] then
-        print (slot_data['game_version'])
-        local version=slot_data['game_version']
+        print(slot_data['game_version'])
+        local version = slot_data['game_version']
         local obj = Tracker:FindObjectForCode('SotFS')
         if obj then
-            if version==0 then
-            obj.Active = true 
-            else obj.Active = false
+            if version == 0 then
+                obj.Active = true
+            else
+                obj.Active = false
             end
         end
     end
+end
 
-    
+local function onClearHandler(slot_data)
+    local clear_timer = os.clock()
+
+    -- ScriptHost:RemoveWatchForCode("StateChange")
+    -- Disable tracker updates.
+    Tracker.BulkUpdate = true
+    -- Use a protected call so that tracker updates always get enabled again, even if an error occurred.
+    local ok, err = pcall(onClear, slot_data)
+    -- Enable tracker updates again.
+    if ok then
+        -- Defer re-enabling tracker updates until the next frame, which doesn't happen until all received items/cleared
+        -- locations from AP have been processed.
+        local handlerName = "AP onClearHandler"
+        local function frameCallback()
+            -- ScriptHost:AddWatchForCode("StateChange", "*", StateChange)
+            ScriptHost:RemoveOnFrameHandler(handlerName)
+            Tracker.BulkUpdate = false
+            print(string.format("Time taken total: %.2f", os.clock() - clear_timer))
+        end
+        ScriptHost:AddOnFrameHandler(handlerName, frameCallback)
+    else
+        Tracker.BulkUpdate = false
+        print("Error: onClear failed:")
+        print(err)
+    end
 end
 
 
 
-function onItem(index, item_id, item_name, player_number)
+
+
+local function onItem(index, item_id, item_name, player_number)
     if index <= CUR_INDEX then
         return
     end
     local is_local = player_number == Archipelago.PlayerNumber
     CUR_INDEX = index
     local item = ITEM_MAPPING[item_id]
-    
+
     if not item or not item[1] then
         -- print(string.format("onItem: could not find item mapping for id %s", item_id))
         return
     end
-    
+
     -- Loop through item mappings
     for _, item_tuple in pairs(item) do
         local item_code = item_tuple[1]
         local item_type = item_tuple[2]
-        
+
         -- Debugging prints to check the item_code and item_type
         if not item_code then
             print("Error: item_code is nil")
@@ -149,9 +148,8 @@ function onItem(index, item_id, item_name, player_number)
     end
 end
 
-
 --called when a location gets cleared
-function onLocation(location_id, location_name)
+local function onLocation(location_id, location_name)
     local location_array = LOCATION_MAPPING[location_id]
     if not location_array or not location_array[1] then
         print(string.format("onLocation: could not find location mapping for id %s", location_id))
@@ -173,30 +171,7 @@ function onLocation(location_id, location_name)
     end
 end
 
-function onEvent(key, value, old_value)
-    updateEvents(value)
-end
-
-function onEventsLaunch(key, value)
-    updateEvents(value)
-end
-
-function onNotify(key, value, old_value)
-    print("onNotify", key, value, old_value)
-end
-
-function onNotifyLaunch(key, value)
-    print("onNotifyLaunch", key, value)
-end
-
-
-
-
-
-
 -- ScriptHost:AddWatchForCode("settings autofill handler", "autofill_settings", autoFill)
 Archipelago:AddClearHandler("clear handler", onClearHandler)
 Archipelago:AddItemHandler("item handler", onItem)
 Archipelago:AddLocationHandler("location handler", onLocation)
-Archipelago:AddSetReplyHandler("notify handler", onNotify)
-Archipelago:AddRetrievedHandler("notify launch handler", onNotifyLaunch)
