@@ -1,0 +1,424 @@
+[
+  // ------- Key Items -------
+  {
+    "name": "Key to the Embedded",
+    "type": "toggle",
+	  "img": "images/items/KeytotheEmbedded.png",
+    "codes": "key_embedded",
+    "ap_id": 19800000
+  },
+  {
+    "name": "Soldier Key",
+    "type": "toggle",
+    "img": "images/items/SoldierKey.png",
+    "codes": "key_soldier",
+    "ap_id": 50600000
+  },
+  {
+    "name": "Key to King's Passage",
+    "type": "toggle",
+    "img": "images/items/KeytoKingsPassage.png",
+    "codes": "key_kingspassage",
+    "ap_id": 50610000
+  },
+  {
+    "name": "Bastille Key",
+    "type": "toggle",
+	  "img": "images/items/BastilleKey.png",
+    "codes": "key_bastille",
+    "ap_id": 50800000
+  },
+  {
+    "name": "Iron Key",
+    "type": "toggle",
+    "img": "images/items/IronKey.png",
+    "codes": "key_iron",
+    "ap_id": 50810000
+  },
+  {
+    "name": "Forgotten Key",
+    "type": "toggle",
+	  "img": "images/items/ForgottenKey.png",
+    "codes": "key_forgotten",
+    "ap_id": 50820000
+  },
+  {
+    "name": "Brightstone Key",
+    "type": "toggle",
+	  "img": "images/items/BrightstoneKey.png",
+    "codes": "key_brightstone",
+    "ap_id": 50830000
+  },
+  {
+    "name": "Antiquated Key",
+    "type": "toggle",
+	  "img": "images/items/AntiquatedKey.png",
+    "codes": "key_antiquated",
+    "ap_id": 50840000
+  },
+  {
+    "name": "Fang Key",
+    "type": "toggle",
+    "img": "images/items/FangKey.png",
+    "codes": "key_fang",
+    "ap_id": 50850000
+  },
+  {
+    "name": "House Key",
+    "type": "toggle",
+	  "img": "images/items/HouseKey.png",
+    "codes": "key_house",
+    "ap_id": 50860000
+  },
+  {
+    "name": "Lenigrast's Key",
+    "type": "toggle",
+	  "img": "images/items/LenigrastsKey.png",
+    "codes": "key_lenigrast",
+    "ap_id": 50870000
+  },
+  {
+    "name": "Rotunda Lockstone",
+    "type": "toggle",
+	  "img": "images/items/RotundaLockstone.png",
+    "codes": "key_rotundalockstone",
+    "ap_id": 50890000
+  },
+  {
+    "name": "Giant's Kinship",
+    "type": "toggle",
+	  "img": "images/items/GiantsKinship.png",
+    "codes": "key_giantskinship",
+    "ap_id": 50900000
+  },
+  {
+    "name": "Ashen Mist Heart",
+    "type": "toggle",
+    "img": "images/items/AshenMistHeart.png",
+    "codes": "key_ashenmistheart",
+    "ap_id": 50910000
+  },
+  {
+    "name": "Tseldora Den Key",
+    "type": "toggle",
+	  "img": "images/items/TseldoraDenKey.png",
+    "codes": "key_tseldoraden",
+    "ap_id": 50930000
+  },
+  {
+    "name": "Ladder Miniature",
+    "type": "toggle",
+    "img": "images/items/LadderMiniature.png",
+    "codes": "key_ladderminiature",
+    "ap_id": 50950000
+  },
+  {
+    "name": "Undead Lockaway Key",
+    "type": "toggle",
+    "img": "images/items/UndeadLockawayKey.png",
+    "codes": "key_undeadlockaway",
+    "ap_id": 50970000
+  },
+  {
+    "name": "Dull Ember",
+    "type": "toggle",
+	  "img": "images/items/DullEmber.png",
+    "codes": "key_dullember",
+    "ap_id": 50990000
+  },
+  {
+    "name": "Aldia Key",
+    "type": "toggle",
+    "img": "images/items/AldiaKey.png",
+    "codes": "key_aldia",
+    "ap_id": 51030000
+  },
+  {
+    "name": "Dragon Talon",
+    "type": "toggle",
+	  "img": "images/items/DragonTalon.png",
+    "codes": "key_dragontalon",
+    "ap_id": 52000000
+  },
+  {
+    "name": "Heavy Iron Key",
+    "type": "toggle",
+	  "img": "images/items/HeavyIronKey.png",
+    "codes": "key_heavyiron",
+    "ap_id": 52100000
+  },
+  {
+    "name": "Frozen Flower",
+    "type": "toggle",
+	  "img": "images/items/FrozenFlower.png",
+    "codes": "key_frozenflower",
+    "ap_id": 52200000
+  },
+  {
+    "name": "Eternal Sanctum Key",
+    "type": "toggle",
+	  "img": "images/items/EternalSanctumKey.png",
+    "codes": "key_eternalsanctum",
+    "ap_id": 52300000
+  },
+  {
+    "name": "Tower Key",
+    "type": "toggle",
+	  "img": "images/items/TowerKey.png",
+    "codes": "key_tower",
+    "ap_id": 52400000
+  },
+  {
+    "name": "Garrison Ward Key",
+    "type": "toggle",
+    "img": "images/items/GarrisonWardKey.png",
+    "codes": "key_garrisonward",
+    "ap_id": 52500000
+  },
+  {
+    "name": "Dragon Stone",
+    "type": "toggle",
+    "img": "images/items/DragonStone.png",
+    "codes": "key_dragonstone",
+    "ap_id": 52650000
+  },
+  {
+    "name": "Scorching Iron Scepter",
+    "type": "toggle",
+	  "img": "images/items/ScorchingIronScepter.png",
+    "codes": "key_scorchingironscepter",
+    "ap_id": 53100000
+  },
+  {
+    "name": "Eye of the Priestess",
+    "type": "toggle",
+	  "img": "images/items/EyeofthePriestress.png",
+    "codes": "key_eyeofthepriestess",
+    "ap_id": 53600000
+  },
+
+  // ------- Character Upgrades -------
+  {
+    "name": "Estus Flask Shards",
+    "type": "consumable",
+    "img": "images/items/EstusFlaskShard.png",
+    "codes": "cons_estusflaskshards",
+	  "initial_quantity": 0,
+    "overlay_background": "#000000",
+    "max_quantity": 12,
+    "ap_id": 60525000
+  },
+  {
+    "name": "Sublime Bone Dusts",
+    "type": "consumable",
+    "img": "images/items/SublimeBoneDust.png",
+    "codes": "cons_sublimebonedusts",
+	  "initial_quantity": 0,
+    "overlay_background": "#000000",
+    "max_quantity": 5,
+    "ap_id": 60526000
+  },
+
+  // ------- Exploration -------
+  {
+    "name": "Flying Feline Boots",
+    "type": "toggle",
+    "img": "images/items/FlyingFelineBoots.png",
+    "codes": "expl_flyingfelineboots",
+    "ap_id": 21460103
+  },
+  {
+    "name": "Silvercat Ring",
+    "type": "toggle",
+    "img": "images/items/SilvercatRing.png",
+    "codes": "expl_silvercatring",
+    "ap_id": 40420000
+  },
+  {
+    "name": "Master Lockstone",
+    "type": "toggle",
+	  "img": "images/items/MasterLockstone.png",
+    "codes": "expl_masterlockstone",
+    "ap_id": 60536000
+  },
+
+  // ------- NPC / Optional Quests -------
+  {
+    "name": "Ring of Whispers",
+    "type": "toggle",
+    "img": "images/items/RingofWhispers.png",
+    "codes": "opt_ringofwhispers",
+    "ap_id": 40610000
+  },
+  {
+    "name": "Token of Fidelity",
+    "type": "toggle",
+	  "img": "images/items/TokenOfFidelity.png",
+    "codes": "opt_tokenoffidelity",
+    "ap_id": 62100000
+  },
+  {
+    "name": "Token of Spite",
+    "type": "toggle",
+	  "img": "images/items/TokenOfSpite.png",
+    "codes": "opt_tokenofspite",
+    "ap_id": 62110000
+  },
+  {
+    "name": "Petrified Egg",
+    "type": "toggle",
+    "img": "images/items/PetrifiedEgg.png",
+    "codes": "opt_petrifiedegg",
+    "ap_id": 62190000
+  },
+  
+  // ------- Additional Resources -------
+  {
+    "name": "Soul of a Giant",
+    "type": "consumable",
+    "img": "images/items/SoulofaGiant.png",
+    "codes": "res_soulofagiant",
+	  "initial_quantity": 0,
+    "overlay_background": "#000000",
+    "max_quantity": 5,
+    "ap_id": 50920000
+  },
+  {
+    "name": "Smelter Wedge",
+    "type": "consumable",
+    "img": "images/items/SmelterWedge.png",
+    "codes": "res_smelterwedge",
+	  "initial_quantity": 0,
+    "overlay_background": "#000000",
+    "max_quantity": 11,
+    "ap_id": 53200000
+  },
+  {
+    "name": "All Smelter Wedges",
+    "type": "toggle",
+	  "img": "images/items/SmelterWedge.png",
+    "codes": "res_allsmelterwedges",
+    "ap_id": 53200011
+  },
+
+  // ------- Unpetrifications -------
+  {
+    "name": "Statue in Things Betwixt",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_thingsbetwixt",
+    "ap_id": 1
+  },
+  {
+    "name": "Rosabeth of Melfia",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_rosabethofmelfia",
+    "ap_id": 2
+  },
+  {
+    "name": "Statue in Heide's Tower of Flame",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_heidestowerofflame",
+    "ap_id": 3
+  },
+  {
+    "name": "Statue in Lost Bastille",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_lostbastille",
+    "ap_id": 4
+  },
+  {
+    "name": "Straid of Olaphis",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_straidofolaphis",
+    "ap_id": 5
+  },
+  {
+    "name": "Statue in Black Gulch",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_blackgulch",
+    "ap_id": 6
+  },
+  {
+    "name": "Statue near Manscorpion Tark",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_manscorpiontark",
+    "ap_id": 7
+  },
+  {
+    "name": "Statue near Black Knight Halberd",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_blackknigthalberd",
+    "ap_id": 8
+  },
+  {
+    "name": "Statue Blocking the Chest in Shaded Ruins",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_shadedruinschest",
+    "ap_id": 9
+  },
+  {
+    "name": "Lion Mage Set Statue in Shaded Ruins",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_shadedruinslionmageset",
+    "ap_id": 10
+  },
+  {
+    "name": "Fang Key Statue in Shaded Ruins",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_shadedruinsfangkey",
+    "ap_id": 11
+  },
+  {
+    "name": "Warlock Mask Statue in Shaded Ruins",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_shadedruinswarlockmask",
+    "ap_id": 12
+  },
+  {
+    "name": "Milfanito Entrance Statue",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_milfanitoentrance",
+    "ap_id": 13
+  },
+  {
+    "name": "Cyclops Statue in Aldia's Keep",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_cyclopsaldiaskeep",
+    "ap_id": 14
+  },
+  {
+    "name": "Left Cage Statue in Aldia's Keep",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_leftcagealdiaskeep",
+    "ap_id": 15
+  },
+  {
+    "name": "Right Cage Statue in Aldia's Keep",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_rightcagealdiaskeep",
+    "ap_id": 16
+  },
+  {
+    "name": "Statue in Dragon Aerie",
+    "type": "toggle",
+	  "img": "images/items/FragrantBranchofYore.png",
+    "codes": "stat_dragonaerie",
+    "ap_id": 17
+  }
+]
