@@ -85,9 +85,6 @@ local function onClear(slot_data)
         return
     end
 
-    -- Set all hidden items to false
-    SetAllHiddenItems(false)
-
     -- Game Version is 0 if playing SotFS and Vanilla otherwise
     local game_version = SLOT_DATA['game_version'] and "Vanilla" or "SotFS"
     if LOG_LEVEL <= LOG_LEVELS.INFO then

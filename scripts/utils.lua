@@ -280,28 +280,4 @@ if not IS_ITEMS_ONLY then
         end
         return AccessibilityLevel.Normal
     end
-
-    local HIDDEN_ITEM_CODES = require("hidden_item_codes")
-
-    --- Sets all hidden items to active or inactive based on the provided value. Only applies to items of type 'toggle', others are reset.
-    --- @param value boolean Whether to set all hidden items to active (true) or inactive (false). Only applies to items of type 'toggle'.
-    function SetAllHiddenItems(value)
-        for _, item_code in pairs(HIDDEN_ITEM_CODES) do
-            local hidden_item_obj = GetObjTypeSafe(item_code, OBJECT_TYPES.JsonItem)
-            if hidden_item_obj then
-                if hidden_item_obj.Type == "toggle" then
-                    hidden_item_obj.Active = value
-                elseif hidden_item_obj.Type == "progressive" then
-                    hidden_item_obj.CurrentStage = 0
-                    hidden_item_obj.Active = false
-                else
-                    if LOG_LEVEL <= LOG_LEVELS.ERROR then
-                        print(string.format(
-                            "> ERROR: [SetAllHiddenItems] Unrecognized item type '%s' for item code '%s'",
-                            hidden_item_obj.Type, item_code))
-                    end
-                end
-            end
-        end
-    end
 end

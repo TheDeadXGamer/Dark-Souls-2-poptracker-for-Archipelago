@@ -23,18 +23,14 @@ print("---- Dark Souls II AP Tracker ----")
 require("utils")
 require("scripts.archipelago")
 
-Tracker:AddItems("items/items.json")
+Tracker:AddItems("items/items.jsonc")
 Tracker:AddLayouts("layouts/items.json")
 Tracker:AddLayouts("layouts/tracker.json")
 Tracker:AddLayouts("layouts/broadcast.json")
 
 if not IS_ITEMS_ONLY then
-    Tracker:AddItems("items/options.json")
+    Tracker:AddItems("items/options.jsonc")
     Tracker:AddLayouts("layouts/options.json")
     Tracker:AddMaps("maps/maps.json")
-    ScriptHost:LoadScript("scripts/locations.lua")
-
-    -- We need to reset the hidden items when starting PopTracker, otherwise
-    -- in some cases it would be impossible to change a location's state.
-    SetAllHiddenItems(true)
+    ScriptHost:LoadScript("scripts/locations_mapping.lua")
 end
